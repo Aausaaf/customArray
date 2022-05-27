@@ -11,43 +11,43 @@
 </body>
 <script>
      //with the help of object how we can use inheriance properties
-     const grandfathe = {
-        height: "7ft",
+     const  car = {
+        width: "7ft",
         color: "white",
-        hair :"black"
+         wheel :4
         
     } 
     //console.log(grandfathe)
-    var fathe = Object.create(grandfathe)
-    fathe.home="3bhk"
-    fathe.properties="3000 square feet land"
-    //console.log(fathe);
-    var so =  Object.create(fathe)
-    so.education ="B tech"
-    so.weight="70kg";
-    console.log(so)
+    var maruti = Object.create(car)
+    maruti.sheeter="4"
+    maruti.properties="Power Break"
+  
+    var alto =  Object.create(maruti)
+    alto.wiper ="automatic"
+    so.weight="700kg";
+    console.log(alto)
 
-    function grandfather(height,color,hair)
+    function car(width,color,wheel)
     {
-        this.height = height;
+        this.width = width;
         this.color= color;
-        this.hair = hair;
+        this.wheel = wheel;
     }
-   var grandfather1 = new grandfather("7ft", "white" , "black")
-    function father(height,color,hair,home,properties)
+   var grandfather1 = new car("7ft", "white" , "4")
+    function maruti(width,color,wheel,sheeter,properties)
     {
-        grandfather.call(this,height,color,hair);
-        this.home = home;
+        car.call(this,width,color,wheel);
+        this.sheeter = sheeter;
         this.properties = properties;
     }
-    var father1 = new father("7ft","white","black","3bhk" ,"3000 sqarfit field")
-    function son(height,color,hair,home,properties,education,weight)
+    var maruti1 = new maruti("7ft","white","black","4" ,"power break")
+    function alto(width,color,wheel,sheeter,properties,wiper,weight)
     {
-        father.call(this,height,color,hair,home,properties)
-        this.education =education;
+        father.call(this,width,color,wheel,sheeter,properties)
+        this.education =wiper;
         this.weight = weight;
     }
-    var son = new son("7ft","white","black","3bhk","3000 square fit field","btech","70kg")
+    var son = new son("7ft","white","black","4","power break","automatic","70kg")
     console.log(son)
    
 </script>
